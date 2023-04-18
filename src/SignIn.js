@@ -1,33 +1,18 @@
-import './App.css';
+import './SignIn.css';
 import React from 'react';
 import logo from './img/IUAlogo.png';
+import cat1 from './img/SignIn1.png';
+import cat2 from './img/SignIn2.PNG';
+import cat3 from './img/SignIn3.PNG';
+import cat4 from './img/SignIn4.PNG';
 import { BrowserRouter as Router,Link } from 'react-router-dom';//BrowserRouter
 import { Routes ,Route } from 'react-router-dom';
 import HomePage from './homePage.js';
 
-const App=()=> {
+const SignIn=()=> {
     function SignIn() {
       return (
-        <div className="App">
-            {/*https://react.dev/reference/react-dom/components/input#reading-the-input-values-when-submitting-a-form*/}
-            
-            {/*
-            <nav class="menu">
-                <div className='menuToggle'>
-                    <input type="checkbox" />
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <ul>
-                        <li><a href="#">忘記密碼了啦!</a></li>
-                        <li><a href="#">關於我們</a></li>
-                        <li><a href="#">連繫我們</a></li>
-                    </ul>
-                </div>
-                
-            </nav>
-      */}
-           
+        <div className="SignIn">    
 
             <div className='signIn'>
                 <div className="title">
@@ -58,6 +43,7 @@ const App=()=> {
                     </Link>
                 </form>
             </div>
+
         </div>
       );
     }
@@ -74,4 +60,4 @@ const App=()=> {
     );
 }
 
-export default App;
+export default SignIn;
