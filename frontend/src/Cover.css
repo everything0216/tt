@@ -12,7 +12,7 @@ html,body,#root,.Cover{
   
 }
 
-.bg {
+.Cover_bg {
     /* The image used */
     background-image: url("img/background.PNG");
   
@@ -32,23 +32,33 @@ html,body,#root,.Cover{
 
 
 
-.signIn{
+.Cover_signIn{
     text-align: center;
     padding-top: 100px;
 }
 
 
-.title{
+.Cover_title{
     font-size: 17px;
     font-family: 'Permanent Marker', cursive;
 }
 
-.title-img{
-  padding-top: 65px;
+/*logo位置*/
+.Cover_title-img{
+    z-index: 2;
+    position: absolute;
+    top: 240px;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
 }
 
-.title-img img{
+/*title位置*/
+.Cover_title-text{
+  padding-top: 20px;
+}
+
+.Cover_title-img img{
     max-height: 200px;  
     max-width: 300px; 
     padding-top: 95px;
@@ -65,17 +75,19 @@ input{
     height: 20px;
 }
 
-.welcomeBtn{
+.Cover_welcomeBtn{
+    z-index: 1;
+    position: absolute;
     background-color: transparent;
     border: none;
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
-    padding-top: 120px;
+    padding-top: 160px;
 }
 
-.welcomeBtn ::after {
+.Cover_welcomeBtn ::after {
     content: '»';
     position: absolute;
     opacity: 0;
