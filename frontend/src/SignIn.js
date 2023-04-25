@@ -44,20 +44,20 @@ const SignIn=()=> {
              	//Form submission happens here
           };
       return (
-        <div className="SignIn">    
-            <div className='bg'>
-                <div className='signIn'>
-                    <div className="title">
+        <div className="SignIn_SignIn">    
+            <div className='SignIn_bg'>
+                <div className='SignIn_signIn'>
+                    <div className="SignIn_title">
                         
-                        <div className="title-img">
+                        <div className="SignIn_title-img">
                             <img src={logo} alt="IUA" />
                         </div>
-                        <div className="title-text">
+                        <div className="SignIn_title-text">
                             <img src={signIn} alt="IUA" />
                         </div>
                     </div>
                     <br/>
-                    <form className="submitForm" onSubmit={onSubmitHandler}>
+                    <form className="SignIn_submitForm" onSubmit={onSubmitHandler}>
                         <label>學號:</label><br/>
                         <input type="text" name="student_id" 
                         onChange={(e) => setStudent_id(e.target.value)}
@@ -69,21 +69,21 @@ const SignIn=()=> {
                         value={password}/>
                         <br/>
                         <br/>
-                            <button type="submit" className="submitButton" >
-                                <span className="button_text">登入</span>
+                            <button type="submit" className="SignIn_submitButton" >
+                                <span className="SignIn_button_text">登入</span>
                             </button>
                     </form>
                 </div>
-                    <div className="img1">
+                    <div className="SignIn_img1">
                         <img src={cat1} alt="IUA" />
                     </div>
-                    <div className="img2">
+                    <div className="SignIn_img2">
                         <img src={cat2} alt="IUA" />
                     </div>
-                    <div className="img3">
+                    <div className="SignIn_img3">
                         <img src={cat3} alt="IUA" />
                     </div>
-                    <div className="img4">
+                    <div className="SignIn_img4">
                         <img src={cat4} alt="IUA" />
                     </div>
 
