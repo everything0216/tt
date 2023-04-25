@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500&family=Playfair+Display:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=PT+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=PT+Serif&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=EB+Garamond:wght@500&family=PT+Serif&family=Permanent+Marker&display=swap');
+
+html,body,#root,.SignIn{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.bg {
+    /* The image used */
+    background-image: url("img/background.PNG");
+  
+    /* Full height */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.title{
+    font-size: 17px;
+    font-family: 'Permanent Marker', cursive;
+}
+
+/*logo*/
+.title-img img{
+    z-index: 2;
+    max-height: 200px;  
+    max-width: 300px; 
+    padding-top: 20px;
+    margin:auto;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+/*sign In*/
+.title-text img{
+    max-width: 300px;
+    min-height: 200px;
+    padding-top: 290px;
+    position: absolute;
+    margin:auto;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.SignIn{
+    z-index: 0;
+    position: relative;
+}
+
+.submitForm{
+    z-index: 2;
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 500px;
+}
+
+
+.submitForm button{
+    width: 150px;
+    border-radius: 15px;
+    background-color: #7ea6e1;
+    color: white;
+    border-color: transparent;
+}
+
+.submitForm label{
+    display:inline-block;
+    width: 170px;
+    text-align: left;
+}
+
+.img1{
+    height: 200px;
+    width: 200px;
+    margin-left: 250px;
+    margin-top: 10px;
+}
+
+
+.img1 img{
+    position: absolute;
+    max-height: 250px;  
+    max-width: 250px; 
+    top: 50px;
+    right: -85px;
+    z-index: 1;
+
+}
+
+.img2 img{
+    position: absolute;
+    max-height: 220px;  
+    max-width: 300px; 
+    z-index: 1;
+    top: -60px;
+    left: -50px;
+
+    
+}
+
+.img3 img{
+    position: absolute;
+    max-height: 200px;  
+    max-width: 300px; 
+    bottom: 10px;
+    left: -65px;
+    z-index: 1;
+}
+
+.img4 img{
+    position: absolute;
+    bottom: -105px;
+    right: -10px;
+    max-height: 300px;  
+    max-width: 380px; 
+    z-index: 1;
+}
