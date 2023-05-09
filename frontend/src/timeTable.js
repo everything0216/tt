@@ -1,5 +1,8 @@
 import './timeTable.css';
 import React from 'react';
+import dialog from './img/chatBubble.png';
+import cookie from './img/cookie.png';
+import toast from './img/toast.png';
 import { BrowserRouter as Router,Link } from 'react-router-dom';//BrowserRouter
 import { Routes ,Route } from 'react-router-dom';
 import {useState} from "react";
@@ -18,9 +21,21 @@ const TimeTable=()=> {
       return (
         <div className="TimeTable">    
             <div className="TimeTablebg">
-                <div className="TimeTable_title">
-                    <label>課表查詢</label>
+                <div className="TimeTable_draw"> 
+                    <div className="TimeTablecookie">
+                        <img src={cookie} alt="IUA" />
+                    </div>
+                    <div className="TimeTabledialog">
+                        <img src={dialog} alt="IUA" />
+                    </div>
+                    <div className="TimeTabletoast">
+                        <img src={toast} alt="IUA" />
+                    </div>
+                    <div className="TimeTable_title">
+                        <label>課表查詢</label>
+                    </div>
                 </div>
+
                 <br/>
                 <div className="timeTable_info_place">
                     <table className="timeTable_info">

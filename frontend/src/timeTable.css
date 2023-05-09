@@ -6,21 +6,75 @@ html,body,#root,.TimeTable{
 }
 
 .TimeTablebg{
- /* The image used */
  background-image: url("img/timetablebg.JPG");
-  
- /* Full height */
- height: 100%;
-
- /* Center and scale the image nicely */
  background-position: center;
- background-repeat: no-repeat;
+ background-repeat: repeat-y;
  background-size: cover;
 }
 
-.TimeTable_title{
+/*dialog position*/
+.TimeTable_draw >.TimeTabledialog{
+    position: absolute;
+    z-index: 2;
     text-align: center;
-    margin-top: 10px;
+    width: 100%;
+}
+
+/*cookie position*/
+.TimeTable_draw > .TimeTablecookie{
+    position: absolute;
+    z-index: 4;
+    width: 70px;
+    height: 70px;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+
+/*toast position*/
+.TimeTable_draw > .TimeTabletoast{
+    position: absolute;
+    z-index: 5;
+    width: 70px;
+    height: 70px;
+    margin-left: 270px;
+    margin-top: 65px;
+}
+
+.TimeTablecookie > img{
+    max-height: 70px;  
+    max-width: 70px;
+    z-index: 4; 
+    
+}
+
+.TimeTabletoast > img{
+    max-height: 70px;  
+    max-width: 70px;
+    z-index: 4; 
+    
+}
+
+.TimeTabledialog > img{
+    max-height: 150px;  
+    max-width: 250px;
+    z-index: 2; 
+    text-align: center;
+}
+
+
+/*課表查詢 position*/
+.TimeTable_title{
+    position: absolute;
+    z-index: 3;
+    text-align: center;
+    width: 100%;
+    margin-top: 55px;
+    
+}
+
+.TimeTable_title > label{
+    z-index: 3;
+    font-family: 'Noto Serif TC', serif;
 }
 
 table, th, td {
@@ -28,9 +82,19 @@ table, th, td {
     border-collapse: collapse;
 }
 
+/*table position*/
 .timeTable_info_place{
-    margin-left: 6px;
-    margin-top: 85px;
+    display: flex;
+    justify-content: center;    
+    flex-wrap: wrap;
+    z-index: 2;
+    margin-top: 140px;
+    
+}
+
+.timeTable_info{
+    font-family: 'Noto Serif TC', serif;
+    z-index: 2;
 }
 
 .timeTable_info > tr{

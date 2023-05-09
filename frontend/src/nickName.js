@@ -22,6 +22,7 @@ const NickName=()=> {
       return (
         <div className="NickName">    
             <div className='NickName_bg'>
+                
                 <div className="NickName_title">
                     <div className="NickName_title-img">
                         <img src={Signlogo} alt="IUA" />
@@ -29,18 +30,21 @@ const NickName=()=> {
                 </div>
                 <br/>
                 <form className="NickName_submitForm" onSubmit={handleSubmit}>
-                    <div  className="hint_label">
-                        <label className="first_label">看來你是第一次登入此系統!<br/>填寫你想要被稱呼的暱稱吧!</label><br/>
+                    <div className="NickName_label_loc">
+                        <div  className="hint_label">
+                            <label className="first_label">看來你是第一次登入此系統!<br/>填寫你想要被稱呼的暱稱吧!</label><br/>
+                        </div>
+                        <input type="text" name="nickName_id" 
+                        onChange={handleChange}
+                        value={nickName_id}/>
                     </div>
-                    <input type="text" name="nickName_id" 
-                    onChange={handleChange}
-                    value={nickName_id}/>
                     <br/>
-                    <div className="NickName_submitButton_place">
+                        <div className="NickName_submitButton_place">
                         <button type="submit" className="NickName_submitButton" >
                             <span className="button_text">確認</span>
                         </button>
                     </div>
+
                 </form>
                 <div className="NickName_img1">
                     <img src={cat1} alt="IUA" />
