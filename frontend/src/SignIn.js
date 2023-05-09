@@ -8,19 +8,46 @@ import cat3 from './img/SignIn3.PNG';
 import cat4 from './img/SignIn4.PNG';
 import { BrowserRouter as Router,Link } from 'react-router-dom';//BrowserRouter
 import { Routes ,Route } from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import {useState} from "react";
+import { onLogin } from "./cookie.js";
 
 const SignIn=()=> {
     function SignIn() {
       const [student_id, setStudent_id] = useState("");
       const [password, setPassword] = useState("");
-      const handleChange = event => {
-        setStudent_id(event.target.student_id);
-        setPassword(event.target.password);
+      const navigate = useNavigate();
+      const handleStudent_idChange = (event) => {
+        setStudent_id(event.target.value);
       };
-      const handleSubmit = (event) => {
-        event.preventDefault();
-        alert(`The name you entered was: ${student_id}`)
+
+      const handlePasswordChange = (event) => {
+              setPassword(event.target.value);
+      };
+      const handleSubmit = (e) => {
+        e.preventDefault();
+        alert(`The name you entered was: ${student_id}`);
+        const formData = {
+                        studentID: student_id,
+                        password: password,
+                      };
+                      fetch('/login', {
+                            method: 'POST',
+                            headers: {
+                              'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify(formData)
+                          })
+                          .then(response => response.json())
+                          .then(data => {
+                            onLogin(student_id);
+                            console.log(data);
+                            navigate('/nickName');
+                          })
+                          .catch(error => {
+                            console.error(error);
+                          });
+                     	//Form submission happens here
       }
       return (
         <div className="SignIn">    
@@ -39,12 +66,12 @@ const SignIn=()=> {
                     <form className="SignIn_submitForm" onSubmit={handleSubmit}>
                         <label>學號:</label><br/>
                         <input type="text" name="student_id" 
-                        onChange={handleChange}
+                        onChange={handleStudent_idChange}
                         value={student_id}/>
                         <br/>
                         <label>密碼:</label><br/>
                         <input type="password" name="password" 
-                        onChange={handleChange}
+                        onChange={handlePasswordChange}
                         value={password}/>
                         <br/>
                         <br/>

@@ -1,14 +1,14 @@
 package com.example.demo.service;
 
 
-import com.example.demo.dao.BasicDao;
+import com.example.demo.BasicEntity;
 import org.springframework.stereotype.Service;
 
 @Service
 public class TodoService {
     //@Autowired
     //TodoDao todoDao; // 取得Dao物件
-    public BasicDao printO(BasicDao request){
+    public BasicEntity printO(BasicEntity request){
         System.out.println(request.getStudentID()+" "+request.getPassword());
         return request;
     }
