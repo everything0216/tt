@@ -6,41 +6,38 @@ html,body,#root,.TimeTable{
 }
 
 .TimeTablebg{
- /* The image used */
  background-image: url("img/timetablebg.JPG");
-  
- /* Full height */
- 
-
- /* Center and scale the image nicely */
  background-position: center;
  background-repeat: repeat-y;
  background-size: cover;
 }
 
-.TimeTabledialog{
+/*dialog position*/
+.TimeTable_draw >.TimeTabledialog{
     position: absolute;
     z-index: 2;
     text-align: center;
     width: 100%;
 }
 
-.TimeTablecookie{
+/*cookie position*/
+.TimeTable_draw > .TimeTablecookie{
     position: absolute;
     z-index: 4;
     width: 70px;
     height: 70px;
-    margin-top: 30px;
+    margin-top: 25px;
     margin-left: 25px;
 }
 
-.TimeTabletoast{
+/*toast position*/
+.TimeTable_draw > .TimeTabletoast{
     position: absolute;
     z-index: 5;
     width: 70px;
     height: 70px;
-    margin-left: 280px;
-    margin-top: 60px;
+    margin-left: 270px;
+    margin-top: 65px;
 }
 
 .TimeTablecookie > img{
@@ -64,6 +61,8 @@ html,body,#root,.TimeTable{
     text-align: center;
 }
 
+
+/*課表查詢 position*/
 .TimeTable_title{
     position: absolute;
     z-index: 3;
@@ -83,6 +82,7 @@ table, th, td {
     border-collapse: collapse;
 }
 
+/*table position*/
 .timeTable_info_place{
     display: flex;
     justify-content: center;    

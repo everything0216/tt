@@ -21,18 +21,21 @@ const TimeTable=()=> {
       return (
         <div className="TimeTable">    
             <div className="TimeTablebg">
-                <div className="TimeTabledialog">
-                    <img src={dialog} alt="IUA" />
+                <div className="TimeTable_draw"> 
+                    <div className="TimeTablecookie">
+                        <img src={cookie} alt="IUA" />
+                    </div>
+                    <div className="TimeTabledialog">
+                        <img src={dialog} alt="IUA" />
+                    </div>
+                    <div className="TimeTabletoast">
+                        <img src={toast} alt="IUA" />
+                    </div>
+                    <div className="TimeTable_title">
+                        <label>課表查詢</label>
+                    </div>
                 </div>
-                <div className="TimeTablecookie">
-                    <img src={cookie} alt="IUA" />
-                </div>
-                <div className="TimeTabletoast">
-                    <img src={toast} alt="IUA" />
-                </div>
-                <div className="TimeTable_title">
-                    <label>課表查詢</label>
-                </div>
+
                 <br/>
                 <div className="timeTable_info_place">
                     <table className="timeTable_info">
