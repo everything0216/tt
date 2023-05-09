@@ -1,6 +1,6 @@
 import './SignIn.css';
 import React from 'react';
-import logo from './img/blue_logo.PNG';
+import Signlogo from './img/blue_logo.PNG';
 import signIn from './img/signIn.PNG';
 import cat1 from './img/SignIn1.png';
 import cat2 from './img/SignIn2.PNG';
@@ -8,7 +8,6 @@ import cat3 from './img/SignIn3.PNG';
 import cat4 from './img/SignIn4.PNG';
 import { BrowserRouter as Router,Link } from 'react-router-dom';//BrowserRouter
 import { Routes ,Route } from 'react-router-dom';
-import HomePage from './homePage.js';
 import {useState} from "react";
 
 const SignIn=()=> {
@@ -19,59 +18,41 @@ const SignIn=()=> {
         setStudent_id(event.target.student_id);
         setPassword(event.target.password);
       };
-      interface FormDataType {student_id:string, password: string, age: string};
-      const responseBody: FormDataType = {student_id: "", password: ""};
-      const onSubmitHandler = (e) => {
-              e.preventDefault();
-              const formData = {
-                studentID: student_id,
-                password: password,
-              };
-              fetch('/login', {
-                    method: 'POST',
-                    headers: {
-                      'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(formData)
-                  })
-                  .then(response => response.json())
-                  .then(data => {
-                    console.log(data);
-                  })
-                  .catch(error => {
-                    console.error(error);
-                  });
-             	//Form submission happens here
-          };
+      const handleSubmit = (event) => {
+        event.preventDefault();
+        alert(`The name you entered was: ${student_id}`)
+      }
       return (
-        <div className="SignIn_SignIn">    
+        <div className="SignIn">    
             <div className='SignIn_bg'>
                 <div className='SignIn_signIn'>
                     <div className="SignIn_title">
                         
                         <div className="SignIn_title-img">
-                            <img src={logo} alt="IUA" />
+                            <img src={Signlogo} alt="IUA" />
                         </div>
                         <div className="SignIn_title-text">
                             <img src={signIn} alt="IUA" />
                         </div>
                     </div>
                     <br/>
-                    <form className="SignIn_submitForm" onSubmit={onSubmitHandler}>
+                    <form className="SignIn_submitForm" onSubmit={handleSubmit}>
                         <label>學號:</label><br/>
                         <input type="text" name="student_id" 
-                        onChange={(e) => setStudent_id(e.target.value)}
+                        onChange={handleChange}
                         value={student_id}/>
                         <br/>
                         <label>密碼:</label><br/>
                         <input type="password" name="password" 
-                        onChange={(e) => setPassword(e.target.value)}
+                        onChange={handleChange}
                         value={password}/>
                         <br/>
                         <br/>
+                        <div className="SignIn_submitButton_place">
                             <button type="submit" className="SignIn_submitButton" >
-                                <span className="SignIn_button_text">登入</span>
+                                <span className="button_text">登入</span>
                             </button>
+                        </div>
                     </form>
                 </div>
                     <div className="SignIn_img1">

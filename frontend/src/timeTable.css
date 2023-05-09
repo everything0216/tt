@@ -1,0 +1,43 @@
+
+html,body,#root,.TimeTable{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.TimeTablebg{
+ /* The image used */
+ background-image: url("img/timetablebg.JPG");
+  
+ /* Full height */
+ height: 100%;
+
+ /* Center and scale the image nicely */
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+
+.TimeTable_title{
+    text-align: center;
+    margin-top: 10px;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.timeTable_info_place{
+    margin-left: 6px;
+    margin-top: 85px;
+}
+
+.timeTable_info > tr{
+    font-size: 13px;
+}
+
+.timeTable_info > tr > .break{
+    font-size: 13px;
+    text-align: center;
+}
