@@ -1,4 +1,5 @@
 package com.example.demo;
+import com.example.demo.FinishedCourse;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
@@ -25,6 +26,9 @@ public class Crawler {
 
         System.setProperty("javax.net.ssl.trustStore", "jssecacerts"); //解決SSL問題
         System.setProperty("webdriver.chrome.driver", "C:\\Program Files (x86)\\Google\\chromedriver.exe");
+
+        //已完成課程
+        ArrayList<FinishedCourse> fCourses = new ArrayList<FinishedCourse>();
 
         ChromeOptions options = new ChromeOptions();
         options.addArguments("–incognito");

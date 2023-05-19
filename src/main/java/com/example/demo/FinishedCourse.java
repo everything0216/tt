@@ -10,7 +10,7 @@ public class FinishedCourse{
     private String time;
     private String teacher;
 
-    public void setId(String id){
+    public FinishedCourse(String id){
         this.studentID = id;
     }
 

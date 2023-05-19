@@ -1,8 +1,10 @@
 package com.example.demo.controller;
 
 import com.example.demo.BasicRepository;
+import com.example.demo.FinishedRepository;
 import com.example.demo.Crawler;
 import com.example.demo.BasicEntity;
+import com.example.demo.FinishedCourse;
 import com.example.demo.service.TodoService;
 import net.sourceforge.tess4j.TesseractException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,10 +17,14 @@ import java.util.Date;
 @RestController
 @RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 public class TodoController {
+    private String sID;
+
     @Autowired
     TodoService todoService;//取得Service物件
     @Autowired
     BasicRepository BRepository;
+    @Autowired
+    FinishedRepository fRepository;
 
     @PostMapping("/login")
     public void getTodoList (@RequestBody BasicEntity basic)throws TesseractException, IOException, InterruptedException  {
@@ -28,6 +34,7 @@ public class TodoController {
         BRepository.save(basic);
         Crawler.CrawlerHandle(account,password);
 
+        sID = account;
     }
     @GetMapping("/hello")
     public String hello() {
@@ -50,5 +57,9 @@ public class TodoController {
         BRepository.save(b);
     }
 
+    @PostMapping("/remained_credits")
+    public void postRemainCredits (@RequestBody FinishedCourse finished)throws TesseractException, IOException, InterruptedException{
+        FinishedCourse finishedCourse = new FinishedCourse(sID);
+    }
 }
 
