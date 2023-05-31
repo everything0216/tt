@@ -4,13 +4,12 @@ import com.example.demo.AESEncryptionDecryption;
 import com.example.demo.BasicRepository;
 import com.example.demo.FinishedRepository;
 import com.example.demo.Crawler;
-import com.example.demo.BasicEntity;
+
 import com.example.demo.FinishedCourse;
-=======
 import com.example.demo.HouseRepository;
 import com.example.demo.dao.BasicEntity;
 import com.example.demo.dao.HouseEntity;
->>>>>>> Stashed changes
+
 import com.example.demo.service.TodoService;
 import net.sourceforge.tess4j.TesseractException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,16 +29,11 @@ public class TodoController {
     @Autowired
     TodoService todoService;//取得Service物件
     @Autowired
-<<<<<<< Updated upstream
-    BasicRepository BRepository;
-    @Autowired
     FinishedRepository fRepository;
-=======
     BasicRepository basicRepository;
     HouseRepository houseRepository;
     String secretKey = "au4a83";
 
->>>>>>> Stashed changes
 
     @PostMapping("/login")
     public void getTodoList (@RequestBody BasicEntity basic)throws TesseractException, IOException, InterruptedException  {
