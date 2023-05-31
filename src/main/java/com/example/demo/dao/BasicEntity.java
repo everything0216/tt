@@ -1,16 +1,10 @@
-package com.example.demo;
+package com.example.demo.dao;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document("basicCollection") //collection name
 public class BasicEntity {
-    public String getId() {
-        return id;
-    }
 
-    public void setId(String id) {
-        this.id = id;
-    }
 
     private String id;
     private String studentID = "";
@@ -22,6 +16,13 @@ public class BasicEntity {
     private String email = "";
     private String team = ""; //班級
     private String birth = "";
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public void setPassword(String password) {
         this.password = password;

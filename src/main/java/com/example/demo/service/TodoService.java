@@ -1,7 +1,7 @@
 package com.example.demo.service;
 
 
-import com.example.demo.BasicEntity;
+import com.example.demo.dao.BasicEntity;
 import org.springframework.stereotype.Service;
 
 @Service

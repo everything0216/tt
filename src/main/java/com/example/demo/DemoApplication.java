@@ -24,6 +24,7 @@ public class DemoApplication {
 
 		@Autowired
 		private TodoService service;
+
 		@Override
 		public void onApplicationEvent(ContextStartedEvent event) {
 			System.out.println("run");
