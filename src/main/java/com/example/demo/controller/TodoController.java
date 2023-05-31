@@ -4,7 +4,6 @@ import com.example.demo.AESEncryptionDecryption;
 import com.example.demo.BasicRepository;
 import com.example.demo.FinishedRepository;
 import com.example.demo.Crawler;
-<<<<<<< Updated upstream
 import com.example.demo.BasicEntity;
 import com.example.demo.FinishedCourse;
 =======
