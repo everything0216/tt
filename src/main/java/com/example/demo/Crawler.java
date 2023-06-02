@@ -14,6 +14,7 @@ import java.io.*;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -32,14 +33,14 @@ public class Crawler {
         System.setProperty("javax.net.ssl.trustStore", "jssecacerts"); //解決SSL問題
         System.setProperty("webdriver.chrome.driver", "C:\\Program Files (x86)\\Google\\chromedriver.exe");
 
-<<<<<<< Updated upstream
+
         //已完成課程
         ArrayList<FinishedCourse> fCourses = new ArrayList<FinishedCourse>();
 
         ChromeOptions options = new ChromeOptions();
-=======
+
         options = new ChromeOptions();
->>>>>>> Stashed changes
+
         options.addArguments("–incognito");
         options.addArguments("remote-allow-origins=*");
         driver = new ChromeDriver(options);
@@ -231,13 +232,10 @@ public class Crawler {
 
         String account = "00957025";
         String password = "98586979";
-        //System.out.println("系所 : "+password.replaceAll("[^\\u4E00-\\u9FA5]",""));
         //CrawlerHandle(account,password);
         //getBasicData(account,password);
         //getMyClass(account,password);
-        String dateTime = DateTimeFormatter.ofPattern("yyyy MM dd")
-                .format(LocalDateTime.now());
-        System.out.println(dateTime);
+        System.out.println("中文");
     }
 }
 

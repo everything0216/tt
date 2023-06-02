@@ -4,7 +4,9 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document("houseCollection") //collection name
 public class HouseEntity {
-    private String post_id = "";
+
+    private String id;
+    private String postId = "";
     private String studentID = "";
     private String name = "";
     private String title = "";
@@ -22,12 +24,18 @@ public class HouseEntity {
     private String note = "";
     private String post_time = "";
 
-    public String getPost_id() {
-        return post_id;
+    public String getId() {
+        return id;
+    }
+    public void setId(String id) {
+        this.id = id;
+    }
+    public String getPostId() {
+        return postId;
     }
 
-    public void setPost_id(String post_id) {
-        this.post_id = post_id;
+    public void setPostId(String postId) {
+        this.postId = postId;
     }
 
     public String getStudentID() {
