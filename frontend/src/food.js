@@ -35,7 +35,7 @@ const Food=()=> {
                 </Link>
                 <ArticleList>
                     <Articleinfo author={"singyi"} text={"I love you"}></Articleinfo>
-                    <Articleinfo author={"taehyung"} text={"I love you soooo such"}></Articleinfo>
+                    <Articleinfo author={"vvvvvvvvv"} text={"I love you soooo such"}></Articleinfo>
                 </ArticleList>
             </Pagebg>
         </Page>
