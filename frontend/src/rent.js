@@ -35,7 +35,7 @@ const Rent=()=> {
                 </Link>
                 <ArticleList>
                     <Articleinfo author={"evelyn"} text={"I love you"}></Articleinfo>
-                    <Articleinfo author={"taehyung"} text={"I love you soooo such"}>hiiiii</Articleinfo>
+                    <Articleinfo author={"vvvvvvvv"} text={"I love you soooo such"}>hiiiii</Articleinfo>
                 </ArticleList>
             </Pagebg>
         </Page>
