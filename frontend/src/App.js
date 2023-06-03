@@ -15,6 +15,10 @@ import Core from './Core.js';
 import Must from './Must.js';
 import Graduation from './Graduation.js';
 import Search from './Search';
+import ChangeClass from './changeClass';
+import Food from './food';
+import Rent from './rent';
+import PostArticle from './postArticle';
 
 const App=()=> {
    
@@ -34,6 +38,10 @@ const App=()=> {
                     <Route path="/Graduation" element={<Graduation />}/>
                     <Route path="/Search" element={<Search />}/>
                     <Route path="/navbar" element={<navbar/> } />
+                    <Route path="/changeClass" element={<ChangeClass/>} />
+                    <Route path="/food" element={<Food/>} />
+                    <Route path="/rent" element={<Rent/>} />
+                    <Route path="/postArticle" element={<PostArticle/>} />
                 </Routes>
              
     );
